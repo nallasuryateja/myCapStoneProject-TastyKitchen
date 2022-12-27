@@ -16,11 +16,16 @@ const Header = props => {
       <div className="nav-content">
         <div className="nav-bar-mobile-logo-container">
           <Link to="/">
-            <img
-              className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-              alt="website logo"
-            />
+            <div className="website-logo">
+              <img
+                src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Frame_274_ldeqfo.svg"
+                alt="website logo"
+              />
+              <img
+                src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Features_hqudif.svg"
+                alt="website logo"
+              />
+            </div>
           </Link>
           <button type="button" className="nav-mobile-btn">
             <img
@@ -37,11 +42,11 @@ const Header = props => {
             <div className="website-logo">
               <img
                 src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Frame_274_ldeqfo.svg"
-                alt="hat"
+                alt="website logo"
               />
               <img
                 src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Features_hqudif.svg"
-                alt="title"
+                alt="website logo"
               />
             </div>
           </Link>
@@ -67,34 +72,18 @@ const Header = props => {
           </button>
         </div>
       </div>
+
       <div className="nav-menu-mobile">
         <ul className="nav-menu-list-mobile">
           <li className="nav-menu-item-mobile">
             <Link to="/" className="nav-link">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
-                alt="nav home"
-                className="nav-bar-image"
-              />
+              <p>Home</p>
             </Link>
           </li>
 
           <li className="nav-menu-item-mobile">
-            <Link to="/products" className="nav-link">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
-                alt="nav products"
-                className="nav-bar-image"
-              />
-            </Link>
-          </li>
-          <li className="nav-menu-item-mobile">
             <Link to="/cart" className="nav-link">
-              <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
-                alt="nav cart"
-                className="nav-bar-image"
-              />
+              <p>Cart</p>
             </Link>
           </li>
         </ul>

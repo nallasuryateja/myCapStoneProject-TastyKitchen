@@ -20,21 +20,21 @@ export default class SimpleSlider extends Component {
           <div>
             <img
               src={primeDeals[0].imageUrl}
-              alt="car"
+              alt="offer"
               className="caro-image"
             />
           </div>
           <div>
             <img
               src={primeDeals[1].imageUrl}
-              alt="car"
+              alt="offer"
               className="caro-image"
             />
           </div>
           <div>
             <img
               src={primeDeals[2].imageUrl}
-              alt="car"
+              alt="offer"
               className="caro-image"
             />
           </div>

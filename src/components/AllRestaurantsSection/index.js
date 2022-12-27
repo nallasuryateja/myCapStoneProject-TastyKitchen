@@ -4,8 +4,8 @@ import Cookies from 'js-cookie'
 
 import {BsArrowLeftSquare, BsArrowRightSquare} from 'react-icons/bs'
 
-import ProductCard from '../ProductCard'
-import ProductsHeader from '../ProductsHeader'
+import RestaurantCard from '../RestaurantCard'
+import RestaurantsHeader from '../RestaurantsHeader'
 
 import './index.css'
 
@@ -29,7 +29,7 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class AllProductsSection extends Component {
+class AllRestaurantsSection extends Component {
   state = {
     productsList: [],
     apiStatus: apiStatusConstants.initial,
@@ -132,14 +132,14 @@ class AllProductsSection extends Component {
 
     return shouldShowProductsList ? (
       <div className="all-products-container">
-        <ProductsHeader
+        <RestaurantsHeader
           activeOptionId={activeOptionId}
           sortByOptions={sortByOptions}
           changeSortby={this.changeSortby}
         />
-        <ul className="products-list">
+        <ul className="restaurants-list">
           {productsList.map(product => (
-            <ProductCard productData={product} key={product.id} />
+            <RestaurantCard productData={product} key={product.id} />
           ))}
         </ul>
         <div className="limit-button-container">
@@ -195,4 +195,4 @@ class AllProductsSection extends Component {
   }
 }
 
-export default AllProductsSection
+export default AllRestaurantsSection

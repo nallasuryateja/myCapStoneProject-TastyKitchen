@@ -4,9 +4,9 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
-import SimilarProductItem from '../SimilarProductItem'
 
 import './index.css'
+import FoodItem from '../FoodItem'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -15,7 +15,7 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class ProductItemDetails extends Component {
+class RestaurantFoodItemDetails extends Component {
   state = {
     productData: {},
     similarProductsData: [],
@@ -128,7 +128,7 @@ class ProductItemDetails extends Component {
     return (
       <div className="product-details-success-view">
         <div className="product-details-container">
-          <img src={imageUrl} alt="product" className="product-image" />
+          <img src={imageUrl} alt="restaurant" className="product-image" />
           <div>
             <h1>{name}</h1>
             <p>{cuisine}</p>
@@ -147,7 +147,7 @@ class ProductItemDetails extends Component {
         <h1 className="similar-products-heading"> Food Items</h1>
         <ul className="similar-products-list">
           {similarProductsData.map(eachSimilarProduct => (
-            <SimilarProductItem
+            <FoodItem
               productDetails={eachSimilarProduct}
               key={eachSimilarProduct.id}
             />
@@ -184,7 +184,7 @@ class ProductItemDetails extends Component {
   }
 }
 
-export default ProductItemDetails
+export default RestaurantFoodItemDetails
 
 /* Line 80:56:   Unknown property 'testid' found  react/no-unknown-property
   Line 158:17:  Unknown property 'testid' found  react/no-unknown-property

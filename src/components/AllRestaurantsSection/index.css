@@ -51,10 +51,12 @@
   }
 }
 
-.products-list {
+.restaurants-list {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  padding-left: 0;
+  width: 100%;
 }
 
 .no-products-view {

@@ -29,7 +29,8 @@
 }
 
 .login-image {
-  width: 278px;
+  width: auto;
+  display: none;
 }
 
 @media screen and (min-width: 992px) {

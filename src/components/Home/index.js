@@ -2,16 +2,15 @@ import './index.css'
 import Header from '../Header'
 import Footer from '../Footer'
 import SliderSection from '../SliderSection'
-import AllProductsSection from '../AllProductsSection'
+import AllRestaurantsSection from '../AllRestaurantsSection'
 
 const Home = () => (
   <>
     <div className="slider-header-section">
-      <Header />
-      <SliderSection classNAme="slider-section" />
+      <Header className="header" />
+      <SliderSection className="slider-section" />
     </div>
-
-    <AllProductsSection />
+    <AllRestaurantsSection />
     <Footer />
   </>
 )

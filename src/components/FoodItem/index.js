@@ -1,6 +1,6 @@
 import './index.css'
 
-const SimilarProductItem = props => {
+const FoodItem = props => {
   const {productDetails} = props
   const {name, cost, foodType, imageUrl, rating} = productDetails
 
@@ -31,4 +31,4 @@ const SimilarProductItem = props => {
   )
 }
 
-export default SimilarProductItem
+export default FoodItem

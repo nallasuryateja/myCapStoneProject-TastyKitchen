@@ -125,7 +125,8 @@
 
 .nav-link {
   text-decoration: none;
-  color: #475569;
+  color: orange;
+  cursor: pointer;
 }
 
 .nav-menu-item-mobile {

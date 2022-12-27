@@ -6,7 +6,7 @@ import Home from './components/Home'
 import Cart from './components/Cart'
 import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
-import ProductItemDetails from './components/ProductItemDetails'
+import RestaurantFoodItemDetails from './components/RestaurantFoodItemDetails'
 
 import './App.css'
 
@@ -30,8 +30,8 @@ const App = () => (
       <ProtectedRoute exact path="/" component={Home} />
       <ProtectedRoute
         exact
-        path="/products/:id"
-        component={ProductItemDetails}
+        path="/restaurant/:id"
+        component={RestaurantFoodItemDetails}
       />
       <ProtectedRoute exact path="/cart" component={Cart} />
       <Route path="/not-found" component={NotFound} />

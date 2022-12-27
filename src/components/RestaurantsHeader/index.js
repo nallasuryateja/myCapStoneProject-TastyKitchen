@@ -2,7 +2,7 @@ import {BsFilterRight} from 'react-icons/bs'
 
 import './index.css'
 
-const ProductsHeader = props => {
+const RestaurantsHeader = props => {
   const onChangeSortby = event => {
     const {changeSortby} = props
     changeSortby(event.target.value)
@@ -43,4 +43,4 @@ const ProductsHeader = props => {
   )
 }
 
-export default ProductsHeader
+export default RestaurantsHeader

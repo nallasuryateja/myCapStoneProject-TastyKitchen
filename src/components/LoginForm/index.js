@@ -118,11 +118,7 @@ class LoginForm extends Component {
           </button>
           {showSubmitError && <p className="error-message">*{errorMsg}</p>}
         </form>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
-          className="login-website-logo-mobile-image"
-          alt="website logo"
-        />
+
         <img
           src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026029/Rectangle_1456_jyek0w.svg"
           className="login-image"
