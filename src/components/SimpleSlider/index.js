@@ -1,8 +1,11 @@
 import {Component} from 'react'
 import Slider from 'react-slick'
 
+import './index.css'
+
 export default class SimpleSlider extends Component {
   render() {
+    const {primeDeals} = this.props
     const settings = {
       dots: true,
       infinite: true,
@@ -15,13 +18,25 @@ export default class SimpleSlider extends Component {
         <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+            <img
+              src={primeDeals[0].imageUrl}
+              alt="car"
+              className="caro-image"
+            />
           </div>
           <div>
-            <h3>2</h3>
+            <img
+              src={primeDeals[1].imageUrl}
+              alt="car"
+              className="caro-image"
+            />
           </div>
           <div>
-            <h3>3</h3>
+            <img
+              src={primeDeals[2].imageUrl}
+              alt="car"
+              className="caro-image"
+            />
           </div>
           <div>
             <h3>4</h3>

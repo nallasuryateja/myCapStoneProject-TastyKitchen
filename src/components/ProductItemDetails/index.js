@@ -82,7 +82,7 @@ class ProductItemDetails extends Component {
 
   renderLoadingView = () => (
     <div className="products-details-loader-container">
-      <Loader type="tail-spin" color="orange" height="50" width="50" />
+      <Loader type="TailSpin" color="orange" height="50" width="50" />
     </div>
   )
 
