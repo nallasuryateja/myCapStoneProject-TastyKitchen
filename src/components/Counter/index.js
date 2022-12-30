@@ -22,8 +22,9 @@ class Counter extends Component {
 
   render() {
     const {quantity} = this.state
+    console.log(quantity)
     return (
-      <div>
+      <div className="counter">
         <button type="button" onClick={this.onDecrement}>
           <BsDashSquare />
         </button>

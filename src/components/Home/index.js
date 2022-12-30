@@ -5,14 +5,12 @@ import SliderSection from '../SliderSection'
 import AllRestaurantsSection from '../AllRestaurantsSection'
 
 const Home = () => (
-  <>
-    <div className="slider-header-section">
-      <Header className="header" />
-      <SliderSection className="slider-section" />
-    </div>
+  <div>
+    <Header className="header" />
+    <SliderSection className="slider-section" />
     <AllRestaurantsSection />
     <Footer />
-  </>
+  </div>
 )
 
 export default Home

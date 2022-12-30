@@ -1,35 +1,38 @@
-import CartContext from '../../context/cartContext'
+import PaymentSuccessful from '../PaymentSuccessful'
 
 import './index.css'
 
-const CartSummary = () => (
-  <CartContext.Consumer>
-    {value => {
-      const {cartList} = value
-      let total = 0
-      cartList.forEach(eachCartItem => {
-        total += eachCartItem.price * eachCartItem.quantity
-      })
+const CartSummary = props => {
+  const {cartList} = props
 
-      return (
-        <>
-          <div className="cart-summary-container">
-            <h1 className="order-total-value">
-              <span className="order-total-label">Order Total:</span> Rs {total}
-              /-
-            </h1>
-            <p className="total-items">{cartList.length} Items in cart</p>
-            <button type="button" className="checkout-button d-sm-none">
-              Checkout
-            </button>
-          </div>
-          <button type="button" className="checkout-button d-lg-none">
-            Checkout
-          </button>
-        </>
-      )
-    }}
-  </CartContext.Consumer>
-)
+  const onClickCheckOut = () => <PaymentSuccessful />
+
+  return (
+    <>
+      <div className="cart-summary-container">
+        <h1 className="order-total-value">
+          <span className="order-total-label">Order Total:</span> Rs 100 /-
+        </h1>
+        <p className="total-items">{cartList.length} Items in cart</p>
+
+        <button
+          type="button"
+          className="checkout-button d-sm-none"
+          onClick={onClickCheckOut}
+        >
+          Checkout
+        </button>
+      </div>
+
+      <button
+        type="button"
+        className="checkout-button d-lg-none"
+        onClick={onClickCheckOut}
+      >
+        Checkout
+      </button>
+    </>
+  )
+}
 
 export default CartSummary

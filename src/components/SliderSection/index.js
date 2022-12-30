@@ -15,15 +15,15 @@ const apiStatusConstants = {
 
 class SliderSection extends Component {
   state = {
-    primeDeals: [],
+    offers: [],
     apiStatus: apiStatusConstants.initial,
   }
 
   componentDidMount() {
-    this.getPrimeDeals()
+    this.getOffers()
   }
 
-  getPrimeDeals = async () => {
+  getOffers = async () => {
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
@@ -45,7 +45,7 @@ class SliderSection extends Component {
         imageUrl: each.image_url,
       }))
       this.setState({
-        primeDeals: updatedData,
+        offers: updatedData,
         apiStatus: apiStatusConstants.success,
       })
       console.log(updatedData)
@@ -57,16 +57,16 @@ class SliderSection extends Component {
     }
   }
 
-  renderPrimeDealsListView = () => {
-    const {primeDeals} = this.state
+  renderSliderOffersView = () => {
+    const {offers} = this.state
     return (
-      <div>
-        <SimpleSlider primeDeals={primeDeals} />
-      </div>
+      <ul>
+        <SimpleSlider primeDeals={offers} />
+      </ul>
     )
   }
 
-  renderPrimeDealsFailureView = () => (
+  renderSliderFailureView = () => (
     <img
       src="https://assets.ccbp.in/frontend/react-js/exclusive-deals-banner-img.png"
       alt="register prime"
@@ -75,7 +75,7 @@ class SliderSection extends Component {
   )
 
   renderLoadingView = () => (
-    <div className="primedeals-loader-container">
+    <div className="slider-loader-container">
       <Loader type="TailSpin" color="orange" height="50" width="50" />
     </div>
   )
@@ -84,9 +84,9 @@ class SliderSection extends Component {
     const {apiStatus} = this.state
     switch (apiStatus) {
       case apiStatusConstants.success:
-        return this.renderPrimeDealsListView()
+        return this.renderSliderOffersView()
       case apiStatusConstants.failure:
-        return this.renderPrimeDealsFailureView()
+        return this.renderSliderFailureView()
       case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
@@ -96,3 +96,5 @@ class SliderSection extends Component {
 }
 
 export default SliderSection
+
+/* Line 80:7:  Unknown property 'testid' found  react/no-unknown-property */

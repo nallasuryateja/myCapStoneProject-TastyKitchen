@@ -2,37 +2,22 @@
   background-color: #0f172a;
   position: absolute;
   width: 1440px;
-  height: 424px;
+  height: 300px;
   left: 0px;
   top: 1268px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  height: 48px;
-  left: 44.44%;
-  right: 39.65%;
-  top: calc(50% - 48px / 2 - 92px);
-
-  font-family: 'DM Sans';
-  font-style: italic;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 48px;
-  /* identical to box height, or 150% */
-
-  color: #ffffff;
+  text-align: center;
 }
 
 .para {
-  position: absolute;
-  width: 479px;
-  height: 64px;
-  left: 480px;
-  top: 168px;
-
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
@@ -45,9 +30,28 @@
   color: #ffffff;
 }
 
+.para-container {
+  color: white;
+}
+
 .icons-list {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.icon {
+  color: white;
+  height: 40;
+  width: 40;
+  margin: 20px;
+}
+
+.logo-sub {
+  color: white;
+}
+
+.logo-heading {
+  color: white;
 }

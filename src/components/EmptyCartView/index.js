@@ -5,15 +5,16 @@ import './index.css'
 const EmptyCartView = () => (
   <div className="cart-empty-view-container">
     <img
-      src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-empty-cart-img.png"
+      src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672312774/cooking_1_hyi14r.svg"
       className="cart-empty-img"
       alt="cart empty"
     />
-    <h1 className="cart-empty-heading">Your Cart Is Empty</h1>
+    <h1 className="cart-empty-heading">No Orders Yet!</h1>
+    <p>Your cart is empty. Add something from the menu.</p>
 
-    <Link to="/products">
-      <button type="button" className="shop-now-btn">
-        Shop Now
+    <Link to="/">
+      <button type="button" className="order-now-btn">
+        Order Now
       </button>
     </Link>
   </div>

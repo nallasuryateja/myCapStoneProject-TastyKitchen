@@ -131,12 +131,13 @@ class AllRestaurantsSection extends Component {
     const shouldShowProductsList = productsList.length > 0
 
     return shouldShowProductsList ? (
-      <div className="all-products-container">
+      <div className="all-restaurants-container">
         <RestaurantsHeader
           activeOptionId={activeOptionId}
           sortByOptions={sortByOptions}
           changeSortby={this.changeSortby}
         />
+        <hr className="horizontal-line" />
         <ul className="restaurants-list">
           {productsList.map(product => (
             <RestaurantCard productData={product} key={product.id} />
@@ -146,7 +147,9 @@ class AllRestaurantsSection extends Component {
           <button type="button" onClick={this.onClickLeftLimit}>
             <BsArrowLeftSquare />
           </button>
-          <p>{activePage} of 20</p>
+          <p>
+            <span>{activePage}</span> of 4
+          </p>
           <button type="button" onClick={this.onClickRightLimit}>
             <BsArrowRightSquare />
           </button>
@@ -159,9 +162,9 @@ class AllRestaurantsSection extends Component {
           className="no-products-img"
           alt="no products"
         />
-        <h1 className="no-products-heading">No Products Found</h1>
+        <h1 className="no-products-heading">No Restaurants Found</h1>
         <p className="no-products-description">
-          We could not find any products. Try other filters.
+          We could not find any Restaurants
         </p>
       </div>
     )
@@ -196,3 +199,8 @@ class AllRestaurantsSection extends Component {
 }
 
 export default AllRestaurantsSection
+
+/*  Line 150:13:  Unknown property 'testid' found  react/no-unknown-property
+  Line 155:19:  Unknown property 'testid' found  react/no-unknown-property
+  Line 160:13:  Unknown property 'testid' found  react/no-unknown-property
+  Line 182:48:  Unknown property 'testid' found  react/no-unknown-property */

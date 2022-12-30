@@ -1,4 +1,4 @@
-.products-header {
+.restaurants-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,8 +7,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .products-header {
+  .restaurants-header {
     margin-top: 32px;
+    width: 85%;
+    padding-left: 30px;
   }
 }
 

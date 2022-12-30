@@ -14,7 +14,7 @@ export default class SimpleSlider extends Component {
       slidesToScroll: 1,
     }
     return (
-      <div>
+      <li>
         <h2> Single Item</h2>
         <Slider {...settings}>
           <div>
@@ -48,7 +48,7 @@ export default class SimpleSlider extends Component {
             <h3>6</h3>
           </div>
         </Slider>
-      </div>
+      </li>
     )
   }
 }

@@ -20,10 +20,18 @@ class RestaurantFoodItemDetails extends Component {
     productData: {},
     similarProductsData: [],
     apiStatus: apiStatusConstants.initial,
+    cartItems: [],
   }
 
   componentDidMount() {
     this.getProductData()
+  }
+
+  onClickAddButton = recipe => {
+    const {cartItems} = this.state
+    const updatedCart = [...cartItems, recipe]
+    this.setState({cartItems: updatedCart})
+    localStorage.setItem('cart', JSON.stringify(updatedCart))
   }
 
   getFormattedData = data => ({
@@ -90,7 +98,7 @@ class RestaurantFoodItemDetails extends Component {
     <div className="product-details-failure-view-container">
       <img
         alt="failure view"
-        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
+        src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672052970/myCapstoneProject/erroring_1_mkmltm.svg"
         className="failure-view-image"
       />
       <h1 className="product-not-found-heading">Product Not Found</h1>
@@ -140,7 +148,7 @@ class RestaurantFoodItemDetails extends Component {
             <br />
             <div>
               <p>{costForTwo}</p>
-              <p>cost of two</p>
+              <p>Cost for two</p>
             </div>
           </div>
         </div>
@@ -150,6 +158,7 @@ class RestaurantFoodItemDetails extends Component {
             <FoodItem
               productDetails={eachSimilarProduct}
               key={eachSimilarProduct.id}
+              onClickAddButton={this.onClickAddButton}
             />
           ))}
         </ul>
@@ -188,4 +197,5 @@ export default RestaurantFoodItemDetails
 
 /* Line 80:56:   Unknown property 'testid' found  react/no-unknown-property
   Line 158:17:  Unknown property 'testid' found  react/no-unknown-property
-  Line 167:17:  Unknown property 'testid' found  react/no-unknown-property */
+  Line 167:17:  Unknown property 'testid' found  react/no-unknown-property 
+    Line 86:7:  Unknown property 'testid' found  react/no-unknown-property */

@@ -10,7 +10,7 @@ const RestaurantsHeader = props => {
 
   const {sortByOptions, activeOptionId} = props
   return (
-    <div className="products-header">
+    <div className="restaurants-header">
       <div>
         <h1 className="products-list-heading">Popular Restaurants</h1>
         <p>
@@ -29,7 +29,7 @@ const RestaurantsHeader = props => {
         >
           {sortByOptions.map(eachOption => (
             <option
-              key={eachOption.optionId}
+              key={eachOption.id}
               value={eachOption.optionId}
               className="select-option"
             >
@@ -37,7 +37,6 @@ const RestaurantsHeader = props => {
             </option>
           ))}
         </select>
-        <hr />
       </div>
     </div>
   )

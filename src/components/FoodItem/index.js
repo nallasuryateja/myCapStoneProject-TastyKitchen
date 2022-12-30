@@ -1,8 +1,14 @@
 import './index.css'
 
+import Counter from '../Counter'
+
 const FoodItem = props => {
-  const {productDetails} = props
+  const {productDetails, onClickAddButton} = props
   const {name, cost, foodType, imageUrl, rating} = productDetails
+
+  const onClickAdd = () => {
+    onClickAddButton(productDetails)
+  }
 
   return (
     <li className="similar-product-item">
@@ -24,11 +30,19 @@ const FoodItem = props => {
           />
         </div>
       </div>
-      <button type="button" className="button add-to-cart-btn">
-        ADD TO CART
+      <Counter />
+      <button
+        type="button"
+        className="button add-to-cart-btn"
+        onClick={onClickAdd}
+      >
+        ADD
       </button>
     </li>
   )
 }
 
 export default FoodItem
+
+/*  Line 8:42:  Unknown property 'testid' found  react/no-unknown-property
+ */

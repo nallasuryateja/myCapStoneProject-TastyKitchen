@@ -1,5 +1,12 @@
 import {Component} from 'react'
 
+import {
+  FaPinterestSquare,
+  FaFacebookSquare,
+  FaInstagram,
+  FaTwitter,
+} from 'react-icons/fa'
+
 import './index.css'
 
 class Footer extends Component {
@@ -9,30 +16,36 @@ class Footer extends Component {
         <div className="logo">
           <img
             src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Frame_274_ldeqfo.svg"
-            alt="hat"
+            alt="website-footer-logo"
+            className="logo-sub"
           />
-          <img
-            src="https://res.cloudinary.com/dsfa91tmn/image/upload/v1672026027/Features_hqudif.svg"
-            alt="title"
-          />
+          <h1 className="logo-heading">Tasty Kitchen</h1>
         </div>
-        <p className="para">
-          The only thing we serious about is food.Contact us on
-        </p>
+        <div className="para-container">
+          <p className="para">
+            The only thing we are serious about is food. Contact us on
+          </p>
+        </div>
 
-        <div>
+        <div className="icon-container">
           <ul className="icons-list">
             <li>
-              <p>P</p>
+              <FaPinterestSquare
+                className="icon"
+                testid="pintrest-social-icon"
+              />
             </li>
             <li>
-              <p>I</p>
+              <FaInstagram className="icon" testid="instagram-social-icon" />
             </li>
             <li>
-              <p>T</p>
+              <FaTwitter className="icon" testid="twitter-social-icon" />
             </li>
             <li>
-              <p>F</p>
+              <FaFacebookSquare
+                className="icon"
+                testid="facebook-social-icon"
+              />
             </li>
           </ul>
         </div>
@@ -42,3 +55,12 @@ class Footer extends Component {
 }
 
 export default Footer
+
+/* pintrest-social-icon 
+
+
+instagram-social-icon
+
+facebook-social-icon
+twitter-social-icon
+*/

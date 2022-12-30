@@ -40,7 +40,7 @@
 .remove-all-btn {
   display: flex;
   align-self: flex-end;
-  color: #0b69ff;
+  color: orange;
   background: transparent;
   font-family: 'Roboto';
   font-size: 18px;

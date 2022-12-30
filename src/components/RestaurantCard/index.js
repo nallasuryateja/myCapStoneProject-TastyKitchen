@@ -10,7 +10,7 @@ const RestaurantCard = props => {
   return (
     <li className="restaurant-item">
       <Link to={`/restaurant/${id}`} className="link-item">
-        <img src={imageUrl} alt="product" className="restaurant-image" />
+        <img src={imageUrl} alt="restaurant" className="restaurant-image" />
         <div>
           <h1 className="name">{name}</h1>
           <p className="brand">{cuisine}</p>
